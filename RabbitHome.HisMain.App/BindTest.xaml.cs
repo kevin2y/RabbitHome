@@ -24,10 +24,24 @@ namespace RabbitHome.HisMain.App
             InitializeComponent();
         }
 
+        UIState state = new UIState();
         private void button_Click(object sender, RoutedEventArgs e)
         {           
             Dictionary<string, object> dict = new Dictionary<string, object> { { "ModelName", "test" }, { "ModelNumber", "X-01" } };
             this.gdProductDetail.DataContext = dict;
+            state.SetPropertyValue("ModelName", "test");
+            state.SetPropertyValue("ModelNumber", "X-01");
+            this.gdProductDetail.DataContext = state;
+        }
+
+        private void btnChange_Click(object sender, RoutedEventArgs e)
+        {
+            state.SetPropertyValue("ModelName", "hahha");
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("state.ModelName=" + state.GetPropertyValue("ModelName"));
         }
     }
 }

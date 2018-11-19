@@ -21,7 +21,10 @@
         <Label x:Name="label1" Grid.Row="2" Content="Model Name" HorizontalAlignment="Left" VerticalAlignment="Top"/>
         <TextBox x:Name="textBox" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="{Binding Path=ModelNumber}" VerticalAlignment="Top" Width="310"/>
         <TextBox x:Name="textBox1" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="{Binding Path=ModelName}" VerticalAlignment="Top" Width="310"/>
-        <Button x:Name="button" Content="GetProduct" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Click="button_Click"/>
-
+        <StackPanel Orientation="Horizontal">
+            <Button x:Name="button" Content="GetProduct" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Click="button_Click" Margin="5"/>
+            <Button x:Name="btnChange" Content="StateChange" HorizontalAlignment="Left" VerticalAlignment="Top" Width="98" Click="btnChange_Click" Margin="5,5,5,0"/>
+            <Button Content="checkState" HorizontalAlignment="Left" VerticalAlignment="Top" Width="98" Click="Button_Click_1"  Margin="5,5,5,0"/>
+        </StackPanel>
     </Grid>
 </Window>
